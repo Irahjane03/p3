@@ -69,13 +69,13 @@ freezeBtn.addEventListener("click", () => {
         {
             title: "RIVAN IT CEBU",
             date: "NOVEMBER 13, 2025",
-            img: "https://scontent.fdvo2-1.fna.fbcdn.net/v/t39.30808-6/326506013_698502161739337_2955712506411277808_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGHpHjPm8wKNVrmPv-xtjmW9jbCQNRhgrz2NsJA1GGCvFJl1sBHONiyoTPnnGFyDaRqOBvHqz_UTLgxmREklawL&_nc_ohc=uRi3ZAcU3isQ7kNvwFYr7cQ&_nc_oc=Adka_O2WxFq2_mPkPi9ph5RwebV_UmEacmajSCe_6w7cjjW6NlJ9TAm0J4d7AM_DaXs&_nc_zt=23&_nc_ht=scontent.fdvo2-1.fna&_nc_gid=JwZ3iYEhJZZDOY0hx1aUAA&oh=00_Afgyz5IYKRCvveJ7BQy8eg3GnZ0qCctemNzqHtMs8X0H_g&oe=69337324",
+            img: "https://scontent.fdvo2-1.fna.fbcdn.net/v/t39.30808-6/326506013_698502161739337_2955712506411277808_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGHpHjPm8wKNVrmPv-xtjmW9jbCQNRhgrz2NsJA1GGCvFJl1sBHONiyoTPnnGFyDaRqOBvHqz_UTLgxmREklawL&_nc_ohc=oozy2iR4GpIQ7kNvwF29qtD&_nc_oc=AdlsmJOU3QsHvNpMcw-egOyOPzJVWDmKcrtxfrngbcndV-VPsJ_eZ1AJakYhvoM79lM&_nc_zt=23&_nc_ht=scontent.fdvo2-1.fna&_nc_gid=D42ONSfnsbQESxeJS66llQ&oh=00_AfmU2HDZIbAvDMIJYWyDPEVlUq3ndmBipPyqfDuYDHGCbA&oe=693F50A4",
             link: "Journal.html"
         },
         {
             title: "MATA TECHNOLOGY, INC.",
             date: "NOVEMBER 14, 2025",
-            img: "https://scontent.fdvo2-1.fna.fbcdn.net/v/t39.30808-6/373328334_691518339668332_6075932851142572698_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFD2fcW_cLZRazf7vB95g7Q_KkiqngkYqb8qSKqeCRipkO317jiZ-HAdlkZa02-Lisdkt_KOzdXSNzXstYcXTiA&_nc_ohc=8tfPFXhuW_YQ7kNvwH8CmhS&_nc_oc=AdlxpK6pzbTowjDOWWbjXfUX8B8yHAZZzvA8GXtXsF4k7pcQ-0upbNqc_KNeK5fbJxI&_nc_zt=23&_nc_ht=scontent.fdvo2-1.fna&_nc_gid=1DHL1dGGumWAb1ie5ZyYpg&oh=00_Afh0nslY7o6xAg5BkKoJ8SmzY5IXFiFcqj2iXCTGKwiaCQ&oe=69337B9A",
+            img: "https://scontent.fdvo2-1.fna.fbcdn.net/v/t39.30808-6/373328334_691518339668332_6075932851142572698_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFD2fcW_cLZRazf7vB95g7Q_KkiqngkYqb8qSKqeCRipkO317jiZ-HAdlkZa02-Lisdkt_KOzdXSNzXstYcXTiA&_nc_ohc=5IzoCU7xev8Q7kNvwHReVrU&_nc_oc=AdkzWycmhpAQI0lyqOJ_WUK7bzuAYxsKm6IEsvRj0OMUfusGS7O7mkRtIYCfpuSoJCk&_nc_zt=23&_nc_ht=scontent.fdvo2-1.fna&_nc_gid=Qt-DmZpN2qUNngxzCbpW5w&oh=00_Afle0MU_urUkDnofHI8tD2seIso1JQLU0EOaxvsDKraUIg&oe=693F591A",
             link: "Journal.html"
         },
         {
