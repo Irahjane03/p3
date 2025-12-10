@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const stacks = document.querySelectorAll(".card-stack-wrapper");
 
     const galleryImages = [
-        ["Pictures/AI.png", "Pictures/W1.jpg", "Pictures/3.jpg", "Pictures/4.jpg", "Pictures/5.jpg"],
+        ["Pictures/1 (173).jpg", "Pictures/1 (174).jpg", "Pictures/1 (175).jpg", "Pictures/1 (176).jpg", "Pictures/1 (177).jpg"],
         ["Pictures/6.jpg", "Pictures/7.jpg", "Pictures/8.jpg", "Pictures/9.jpg", "Pictures/10.jpg"],
         ["Pictures/11.jpg", "Pictures/12.jpg", "Pictures/13.jpg", "Pictures/14.jpg", "Pictures/15.jpg"],
         ["Pictures/16.jpg", "Pictures/17.jpg", "Pictures/18.jpg", "Pictures/19.jpg", "Pictures/20.jpg"],
