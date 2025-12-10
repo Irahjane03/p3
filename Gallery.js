@@ -49,14 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const stacks = document.querySelectorAll(".card-stack-wrapper");
 
     const galleryImages = [
-        ["Pictures/AI.png", "Pictures/1 (174).jpg", "Pictures/1 (175).jpg", "Pictures/1 (176).jpg", "Pictures/1 (177).jpg"],
-        ["Pictures/6.jpg", "Pictures/7.jpg", "Pictures/8.jpg", "Pictures/9.jpg", "Pictures/10.jpg"],
-        ["Pictures/11.jpg", "Pictures/12.jpg", "Pictures/13.jpg", "Pictures/14.jpg", "Pictures/15.jpg"],
-        ["Pictures/16.jpg", "Pictures/17.jpg", "Pictures/18.jpg", "Pictures/19.jpg", "Pictures/20.jpg"],
-        ["Pictures/21.jpg", "Pictures/22.jpg", "Pictures/23.jpg", "Pictures/24.jpg", "Pictures/25.jpg"],
-        ["Pictures/26.jpg", "Pictures/27.jpg", "Pictures/28.jpg", "Pictures/29.jpg", "Pictures/30.jpg"],
-        ["Pictures/31.jpg", "Pictures/32.jpg", "Pictures/33.jpg", "Pictures/34.jpg", "Pictures/35.jpg"],
-        ["Pictures/36.jpg", "Pictures/37.jpg", "Pictures/38.jpg", "Pictures/39.jpg", "Pictures/40.jpg"]
+        ["Pictures/K.jpg", "Pictures/L.jpg", "Pictures/M.jpg", "Pictures/N.jpg", "Pictures/O.jpg"],
+        ["Pictures/P.jpg", "Pictures/P.jpg", "Pictures/P.jpg", "Pictures/P.jpg", "Pictures/P.jpg"],
+        ["Pictures/S.png", "Pictures/T.jpg", "Pictures/U.jpg", "Pictures/R.jpg", "Pictures/Q.jpg"],
+        ["Pictures/X.jpg", "Pictures/W.jpg", "Pictures/V.jpg", "Pictures/Y.jpg", "Pictures/Z.jpg"],
+        ["Pictures/ZA.jpg", "Pictures/ZB.jpg", "Pictures/ZC.jpg" ],
+        ["Pictures/A.jpg", "Pictures/B.jpg", "Pictures/C.jpg"],
+        ["Pictures/F.jpg", "Pictures/G.jpg", "Pictures/H.jpg", "Pictures/I.jpg", "Pictures/J.jpg"],
+        ["Pictures/ZD.jpg", "Pictures/ZH.jpg", "Pictures/ZF.jpg", "Pictures/ZG.jpg", "Pictures/ZE.jpg"],
+        ["Pictures/ZJ.jpg", "Pictures/ZM.jpg", "Pictures/ZK.jpg", "Pictures/ZI.jpg", "Pictures/ZL.jpg"],
+        ["Pictures/ZN.jpg", "Pictures/ZO.jpg", "Pictures/ZP.jpg", "Pictures/ZQ.jpg", "Pictures/ZR.jpg"],
     ];
 
     stacks.forEach((stack, index) => {
