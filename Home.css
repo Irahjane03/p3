@@ -1,0 +1,434 @@
+/* ===== VARIABLES & RESET ===== */
+:root {
+    --accent: #b30000;
+    --accent-hover: #ff0000;
+    --text-color: #d9d9d9;
+    --bg-color: #0a0a0a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding-top: 100px;
+    overflow-x: hidden;
+}
+
+/* ===== SPLINE BACKGROUND ===== */
+.spline-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    object-fit: fill;
+}
+
+/* Freeze button styling */
+.freeze-btn {
+    cursor: pointer;
+    margin-left: 15px;
+    color: white;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.freeze-btn:hover {
+    transform: scale(1.2);
+}
+
+/* When hamburger menu is open, change freeze button inside nav-links to black */
+.nav-links.active .freeze-btn {
+    color: black;
+}
+
+/* Adjust mobile navbar */
+@media (max-width: 900px) {
+    .freeze-btn {
+        margin: 10px auto 0 auto;
+    }
+}
+
+/* Ensure background covers screen */
+.spline-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    object-fit: cover;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(5px);
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links a {
+    margin: 0 15px;
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Default desktop menu */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    /* vertically center all items */
+    flex-wrap: wrap;
+    /* allow wrapping on small screens */
+}
+
+/* Hide hamburger on desktop */
+.menu-toggle {
+    display: none;
+
+}
+
+/* ---- MOBILE BEHAVIOR ---- */
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+        /* always hidden on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        right: 8%;
+        background: rgba(158, 158, 158, 0.816);
+        padding: 20px 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        z-index: 999;
+    }
+
+    .nav-links a {
+        color: #000;
+        padding: 10px 0;
+        font-size: 18px;
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+        /* show hamburger */
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+        /* show menu on click */
+    }
+}
+
+
+
+/* ===== HERO SECTION ===== */
+.hero {
+    min-height: 80vh;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.hero-text h2 {
+    font-size: 70px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: -1rem;
+    margin-left: 2rem;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.social-icons i {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    transition: .3s ease;
+    margin-left: 2rem;
+}
+
+.social-icons i:hover {
+    color: #8b0000;
+}
+
+.hero-img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 20%;
+    overflow: hidden;
+}
+
+.hero-img img {
+    width: 100%;
+    display: block;
+    border-radius: 20%;
+}
+
+/* ===== ABOUT ME SECTION ===== */
+.about-me {
+    min-height: 50vh;
+    padding: 60px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    /* fade in on scroll */
+    transform: translateX(100px);
+    /* slide in from right initially */
+}
+
+.about-text {
+    max-width: 700px;
+    text-align: left;
+}
+
+.about-text h4 {
+    font-size: 1rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* About box on the right side */
+.about-box {
+    position: absolute;
+    top: 50px;
+    right: 6%;
+    background: rgba(44, 44, 44, 0.533);
+    padding: 30px 30px;
+    border-radius: 15px;
+    color: #fff;
+    max-width: 700px;
+    line-height: 1.7;
+    font-size: 1.2rem;
+    text-align: justify;
+
+}
+
+/* Responsive: make About Me visible and centered on small screens */
+@media (max-width: 900px) {
+    .about-box {
+        position: static !important;
+        /* remove absolute */
+        margin: 30px auto 50px auto;
+        /* center with some spacing */
+        max-width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .about-me {
+        transform: translateX(0) !important;
+        /* reset GSAP offset */
+        opacity: 1 !important;
+        /* always visible */
+        padding: 20px 8%;
+        min-height: auto;
+    }
+}
+
+/* Make sure the image can animate */
+#slideImg {
+    position: relative;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-box {
+        position: static;
+        margin-top: 30px;
+        max-width: 100%;
+
+    }
+}
+
+/* FIX: Keep About Me visible on small screens */
+@media (max-width: 700px) {
+    .about-box {
+        position: static !important;
+        margin-top: 50px;
+        max-width: 100%;
+    }
+
+    .about-me {
+        padding-top: 0;
+        padding-bottom: 100px;
+        min-height: auto;
+    }
+}
+
+
+/* Image slides down on the left side of about */
+.about-img-slide {
+    position: absolute;
+    left: 8%;
+    /* left side of the page */
+    top: 100px;
+    /* initial top position */
+    z-index: 1;
+}
+
+.about-img-slide img {
+    width: 300px;
+    /* adjust size as needed */
+    border-radius: 20%;
+    display: block;
+}
+
+/* Add extra bottom space to allow scrolling */
+body {
+    padding-bottom: 200px;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 50px;
+    }
+
+    .about-me {
+        transform: translateY(50px);
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 400px) {
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .hero-text h2 {
+        font-size: 32px;
+    }
+}
+
+.about-section {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    padding: 50px 8%;
+    margin-bottom: 200px;
+    /* extra scroll space */
+}
+
+.about-content {
+    display: flex;
+    justify-content: flex-end;
+    /* info stays right */
+    align-items: flex-start;
+    position: relative;
+}
+
+.about-info {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 30px 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    max-width: 600px;
+    z-index: 2;
+}
+
+.about-info h2 {
+    color: var(--accent);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-info p {
+    color: #d9d9d9;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Photo initial position on right */
+.about-photo {
+    position: absolute;
+    right: 8%;
+    /* start on right */
+    top: 0;
+    z-index: 1;
+}
+
+.about-photo img {
+    width: 300px;
+    border-radius: 20%;
+    display: block;
+}

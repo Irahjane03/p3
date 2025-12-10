@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Irah Jane / Journals</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="Journal.css" />
+    <script src="Journal.js" defer></script>
+</head>
+
+<body>
+
+    <iframe id="spline-bg" src="https://my.spline.design/animatedbackgroundgradientforweb-0FtwSAsDKvT7wWQgn0vfU7OS/"
+        frameborder="0" allowfullscreen class="spline-bg" aria-hidden="true"></iframe>
+
+    <img id="spline-static" src="Pictures/W1.jpg" class="spline-bg" style="display:none;">
+
+    <header class="navbar">
+        <div class="logo"><span>PORTFOLIO</span></div>
+        <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+        <nav class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Journal.html" class="active">Journals</a>
+            <a href="Certificate.html">Certificate</a>
+            <a href="About.html">About</a>
+            <span class="freeze-btn"><i class="fa-solid fa-moon"></i></span>
+        </nav>
+    </header>
+
+    <section class="journal-header">
+        <h1 class="journal-title">Field Journal</h1>
+        <p class="journal-subtitle">Insights and reflections from our Industry Immersion.</p>
+    </section>
+
+    <div class="journal-container">
+
+        <div class="location-section">
+            <h2 class="section-title"><i class="fa-solid fa-location-dot"></i> Cebu Leg</h2>
+            <div class="journal-grid">
+                
+                <div class="journal-card">
+                    <img src="Pictures/Certificate.jpeg" alt="UP Business Incubator">
+                    <div class="caption">UP Business Incubator for IT</div>
+                </div>
+
+                <div class="journal-card">
+                    <img src="Pictures/1 (0).jpg" alt="Dynata Philippines">
+                    <div class="caption">Dynata Philippines Inc.</div>
+                </div>
+
+                <div class="journal-card">
+                    <img src="Pictures/1 (0).jpg" alt="Rivan IT">
+                    <div class="caption">Rivan IT Cebu</div>
+                </div>
+
+                <div class="journal-card">
+                    <img src="Pictures/1 (0).jpg" alt="Mata Technologies">
+                    <div class="caption">Mata Technologies, Inc.</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="location-section">
+            <h2 class="section-title"><i class="fa-solid fa-location-dot"></i> Bohol Leg</h2>
+            <div class="journal-grid">
+                
+                <div class="journal-card">
+                    <img src="Pictures/Certificate.jpeg" alt="TARSIER 117">
+                    <div class="caption">T.A.R.S.I.E.R. 117 (Emergency Rescue)</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="fullscreenModal">
+        <span id="closeFullscreenModal">&times;</span>
+        <img id="fullscreenImg" src="" alt="Zoomed Journal">
+    </div>
+
+</body>
+</html>

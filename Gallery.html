@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irah Jane / Gallery</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Gallery.css">
+
+    <!-- Custom JS -->
+    <script src="Gallery.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Spline background -->
+    <iframe id="spline-bg" src="https://my.spline.design/animatedbackgroundgradientforweb-0FtwSAsDKvT7wWQgn0vfU7OS/"
+        frameborder="0" allowfullscreen class="spline-bg" aria-hidden="true"></iframe>
+
+    <img id="spline-static" src="Pictures/W1.jpg" class="spline-bg" style="display:none;">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><span>PORTFOLIO</span></div>
+        <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+        <nav class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="Gallery.html" class="active">Gallery</a>
+            <a href="Journal.html">Journals</a>
+            <a href="Certificate.html">Certificate</a>
+            <a href="About.html">About</a>
+            <span class="freeze-btn"><i class="fa-solid fa-moon"></i></span>
+        </nav>
+    </header>
+
+    <!-- Gallery Header -->
+    <section class="gallery-header">
+        <h1>Educational Tour Gallery</h1>
+        <p>Memories from Cebu and Bohol – UP Cebu, Dynata, Rivan IT, Mata Tech, and more.</p>
+    </section>
+
+    <!-- Tour Stacks -->
+    <section class="tour-stack-section">
+        <div class="stack-container">
+
+            <!-- 8 Stacks -->
+            <div class="card-stack-wrapper" id="stack1">
+                <div class="card-stack"></div>
+                <div class="nav-buttons-horizontal">
+                    <button class="stack-btn prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="stack-btn next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="card-stack-wrapper" id="stack2">
+                <div class="card-stack"></div>
+                <div class="nav-buttons-horizontal">
+                    <button class="stack-btn prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="stack-btn next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="card-stack-wrapper" id="stack3">
+                <div class="card-stack"></div>
+                <div class="nav-buttons-horizontal">
+                    <button class="stack-btn prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="stack-btn next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="card-stack-wrapper" id="stack4">
+                <div class="card-stack"></div>
+                <div class="nav-buttons-horizontal">
+                    <button class="stack-btn prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="stack-btn next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="card-stack-wrapper" id="stack5">
+                <div class="card-stack"></div>
+                <div class="nav-buttons-horizontal">
+                    <button class="stack-btn prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="stack-btn next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="card-stack-wrapper" id="stack6">
+                <div class="card-stack"></div>
+                <div class="nav-buttons-horizontal">
+                    <button class="stack-btn prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="stack-btn next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="card-stack-wrapper" id="stack7">
+                <div class="card-stack"></div>
+                <div class="nav-buttons-horizontal">
+                    <button class="stack-btn prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="stack-btn next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="card-stack-wrapper" id="stack8">
+                <div class="card-stack"></div>
+                <div class="nav-buttons-horizontal">
+                    <button class="stack-btn prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="stack-btn next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Fullscreen Image Modal -->
+    <div id="fullscreenModal">
+        <span id="closeFullscreenModal">&times;</span>
+        <img id="fullscreenImg" src="" alt="Gallery Image">
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

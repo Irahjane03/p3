@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Irah Jane / Certificates</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="Certificate.css" />
+    <script src="Certificate.js" defer></script>
+</head>
+
+<body>
+
+    <iframe id="spline-bg" src="https://my.spline.design/animatedbackgroundgradientforweb-0FtwSAsDKvT7wWQgn0vfU7OS/"
+        frameborder="0" allowfullscreen class="spline-bg" aria-hidden="true"></iframe>
+
+    <img id="spline-static" src="Pictures/W1.jpg" class="spline-bg" style="display:none;">
+
+    <header class="navbar">
+        <div class="logo"><span>PORTFOLIO</span></div>
+        <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+        <nav class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Journal.html">Journals</a>
+            <a href="Certificate.html" class="active">Certificate</a>
+            <a href="About.html">About</a>
+            <span class="freeze-btn"><i class="fa-solid fa-moon"></i></span>
+        </nav>
+    </header>
+
+    <section class="cert-header">
+        <h1 class="cert-title">Certifications & Awards</h1>
+        <p class="cert-subtitle">Recognitions received during my academic and professional journey.</p>
+    </section>
+
+    <div class="cert-container">
+        <div class="cert-grid">
+
+            <div class="cert-card">
+                <div class="img-wrapper">
+                    <img src="Pictures/Certificate.jpeg" alt="Completion of Educ Tour">
+                </div>
+                <div class="cert-info">
+                    <h3>Educational Tour Completion</h3>
+                    <p>Official completion of the Cebu & Bohol Industry Immersion.</p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="img-wrapper">
+                    <img src="Pictures/Certificate.jpeg" alt="Tarsier Appearance">
+                </div>
+                <div class="cert-info">
+                    <h3>Certificate of Appearance</h3>
+                    <p>Issued by T.A.R.S.I.E.R. 117 (Bohol Emergency Rescue).</p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="img-wrapper">
+                    <img src="Pictures/Certificate.jpeg" alt="Bitget Programming">
+                </div>
+                <div class="cert-info">
+                    <h3>Bitget Programming</h3>
+                    <p>Certificate of Participation in Programming Lessons.</p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="img-wrapper">
+                    <img src="Pictures/Certificate.jpeg" alt="Simplilearn Certificate">
+                </div>
+                <div class="cert-info">
+                    <h3>Simplilearn Certification</h3>
+                    <p>Professional certification for technical skills.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="fullscreenModal">
+        <span id="closeFullscreenModal">&times;</span>
+        <img id="fullscreenImg" src="" alt="Certificate View">
+    </div>
+
+</body>
+</html>

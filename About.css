@@ -1,0 +1,914 @@
+/* ===== VARIABLES & RESET ===== */
+:root {
+    --accent: #b30000;
+    --accent-hover: #ff0000;
+    --text-color: #d9d9d9;
+    --bg-color: #0a0a0a;
+    --cv-bg: rgba(20, 20, 20, 0.9);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding-top: 100px;
+    overflow-x: hidden;
+}
+
+/* SPLINE BACKGROUND */
+.spline-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    object-fit: cover;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(5px);
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Freeze button */
+.freeze-btn {
+    cursor: pointer;
+    margin-left: 15px;
+    color: white;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.freeze-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Mobile Nav */
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        right: 8%;
+        background: rgba(158, 158, 158, 0.816);
+        padding: 20px 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        z-index: 999;
+    }
+
+    .nav-links a {
+        color: #000;
+        padding: 10px 0;
+        font-size: 18px;
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .freeze-btn {
+        margin: 10px auto 0 auto;
+    }
+}
+
+/* ===== CV CONTAINER ===== */
+.cv-container {
+    max-width: 1600px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px;
+    background: var(--cv-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 50px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 40px 0;
+}
+
+.section-title {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--accent);
+    padding-left: 15px;
+}
+
+/* CV HEADER */
+.cv-header {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 5rem;
+}
+
+.profile-photo {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent);
+    flex-shrink: 0;
+    margin-right: 3rem;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.header-info h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: #fff;
+    word-wrap: break-word;
+}
+
+.header-info .role {
+    color: #aaa;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.header-info .bio {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Style the email link to match the theme */
+.cv-meta a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* space between icon and text */
+}
+
+.cv-meta a:hover {
+    color: #fff;
+    /* Turns white on hover */
+    text-decoration: underline;
+}
+
+/* ===== CV DOWNLOAD BUTTON ===== */
+.download-cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.download-cv-btn:hover {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 20px rgba(179, 0, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+.download-cv-btn i {
+    font-size: 1.2rem;
+}
+
+/* EDUCATION */
+.education-item {
+    display: flex;
+    gap: 30px;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.education-item .year {
+    font-weight: 700;
+    color: var(--accent);
+    min-width: 160px;
+    font-size: 1.1rem;
+}
+
+.education-item .details h4 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.education-item .details p {
+    color: #aaa;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    margin: 30px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-box {
+    flex: 1;
+    min-width: 220px;
+    min-height: 250px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 35px 20px;
+    border-radius: 12px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: 0.3s;
+}
+
+.skill-box:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent);
+}
+
+.skill-box h3 {
+    margin: 0 0 30px 0;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Icon Sizing */
+.icons img,
+.icons i {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.icons img:hover,
+.icons i:hover {
+    transform: scale(1.15);
+}
+
+.icons img[alt="SQL"] {
+    width: 120px !important;
+    height: 60px !important;
+}
+
+/* ===== FINANCE SLIDER ===== */
+.finance-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+}
+
+.head h2 a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.head h2 a:hover {
+    color: var(--accent);
+}
+
+.slider-finance {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) #111;
+    margin-top: 1rem;
+}
+
+.list-finance {
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.item-finance {
+    flex-shrink: 0;
+}
+
+.item-finance img {
+    width: 280px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.item-finance img:hover {
+    transform: scale(1.05);
+    border-color: var(--accent);
+}
+
+/* ===== TOUR STACK SECTION (FIXED IMAGES) ===== */
+.tour-stack-section {
+    width: 80%;
+}
+
+.stack-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    height: 350px;
+    width: 100%;
+    margin-left: 3rem;
+}
+
+.card-stack-wrapper {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    min-width: 280px;
+}
+
+.card-stack {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Changed class to match JS logic */
+.stack-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: #000;
+
+    /* FIX: Ensure background image shows up */
+    background-size: cover;
+    background-position: center;
+}
+
+.stack-card.active {
+    z-index: 3;
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    border-color: var(--accent);
+}
+
+.stack-card.next {
+    z-index: 2;
+    transform: scale(0.95) translateY(20px);
+    opacity: 0.6;
+}
+
+.stack-card.next-2 {
+    z-index: 1;
+    transform: scale(0.9) translateY(40px);
+    opacity: 0.3;
+}
+
+.stack-card.hidden {
+    opacity: 0;
+    transform: scale(0.7) translateY(60px);
+    z-index: 0;
+}
+
+.info-panel {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    min-width: 250px;
+
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: 2rem;
+}
+
+.stack-btn {
+    background: #222;
+    border: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.stack-btn:hover {
+    background: var(--accent);
+}
+
+.tour-title {
+    font-size: 2.2rem;
+    color: #fff;
+    line-height: 1.2;
+    word-wrap: break-word;
+
+    /* NEW: Keeps height fixed (approx 2 lines) so buttons don't jump */
+    min-height: 2.4em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    margin-left: 2rem;
+}
+
+.tour-subtitle {
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    margin-left: 2rem;
+}
+
+.details-btn {
+    padding: 12px 25px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 30px;
+    cursor: pointer;
+    width: fit-content;
+    transition: 0.3s;
+    font-weight: 600;
+    margin-left: 2rem;
+}
+
+.details-btn:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-container {
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.subtext {
+    color: #aaa;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.input-box {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-box label {
+    font-size: 0.9rem;
+    color: #ccc;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.input-box textarea {
+    height: 120px;
+    resize: none;
+}
+
+.send-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: #ff1a1a;
+    box-shadow: 0 0 20px rgba(179, 0, 0, 0.5);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .cv-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cv-meta {
+        justify-content: center;
+    }
+
+    .stack-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card-stack-wrapper {
+        height: 350px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .info-panel {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cv-container {
+        padding: 30px;
+    }
+
+    .nav-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 80px;
+    }
+
+    .cv-container {
+        padding: 15px;
+        width: 100%;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        background: rgba(10, 10, 10, 0.85);
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+
+    .header-info h1 {
+        font-size: 2rem;
+    }
+
+    .header-info .bio {
+        font-size: 0.9rem;
+    }
+
+    .skills-line {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .skill-box {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .education-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .card-stack-wrapper {
+        height: 280px;
+    }
+
+    .tour-title {
+        font-size: 1.5rem;
+    }
+
+    .contact-container {
+        padding: 20px 10px;
+    }
+
+    .contact-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .item-finance img {
+        width: 180px;
+        height: 100px;
+    }
+}
+
+/* =========================================
+   ADD THIS TO THE VERY BOTTOM OF YOUR CSS
+   TO FIX EXTREME COMPRESSION ISSUES
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    /* 1. Reset Global Container Padding */
+    .cv-container {
+        width: 100% !important;
+        padding: 20px 15px !important;
+        /* Less padding to give content space */
+        margin: 0 auto !important;
+        overflow-x: hidden;
+        /* Prevents horizontal scrolling */
+    }
+
+    /* 2. Fix Header Alignment */
+    .cv-header {
+        margin-left: 0 !important;
+        /* Removes the 5rem margin */
+        padding: 0 !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-info {
+        width: 100%;
+        min-width: auto !important;
+        /* Allows it to shrink */
+    }
+
+    .header-info h1 {
+        font-size: 1.8rem !important;
+        /* Prevents title from breaking layout */
+        word-break: break-word;
+    }
+
+    /* 3. Fix Tour/Industry Exposure Section */
+    .tour-stack-section {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .stack-container {
+        margin-left: 0 !important;
+        /* Removes the 3rem margin */
+        width: 100% !important;
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-stack-wrapper {
+        width: 100% !important;
+        min-width: unset !important;
+        /* Allows cards to shrink */
+        height: 300px !important;
+        /* Maintains height for visuals */
+        margin-bottom: 20px;
+    }
+
+    .info-panel {
+        width: 100% !important;
+        min-width: unset !important;
+        padding: 0 10px;
+        text-align: center;
+        /* Centers text for better mobile reading */
+    }
+
+    /* 4. Fix Title and Button Offsets */
+    .tour-title,
+    .tour-subtitle,
+    .details-btn {
+        margin-left: 0 !important;
+        /* Removes the 2rem margin */
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .tour-title {
+        font-size: 1.6rem !important;
+        min-height: auto !important;
+    }
+
+    .nav-buttons {
+        margin-left: 0 !important;
+        justify-content: center !important;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .details-btn {
+        margin: 10px auto !important;
+        /* Centers the button */
+        display: block;
+    }
+}
+
+/* ==============================================
+   FIX FOR THIN IMAGES & RESPONSIVE TOUR SECTION
+   Add this to the very bottom of your CSS file
+   ============================================== */
+
+@media (max-width: 600px) {
+
+    /* 1. Fix the collapsed container */
+    .stack-container {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        /* Allow container to grow with content */
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
+
+    /* 2. FORCE HEIGHT for the image area (Fixes the "thin" look) */
+    .card-stack-wrapper {
+        width: 100% !important;
+        height: 280px !important;
+        /* Gives the images actual space */
+        min-height: 280px !important;
+        /* Prevents collapsing */
+        margin-bottom: 25px !important;
+        /* Space between image and arrows */
+        flex: none !important;
+        /* Prevents squishing */
+    }
+
+    /* 3. Ensure the cards fill that new space */
+    .stack-card {
+        width: 100% !important;
+        height: 100% !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    /* 4. Center the text and buttons below the image */
+    .info-panel {
+        width: 100% !important;
+        padding: 0 !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* 5. Fix Title Sizing and Alignment */
+    .tour-title {
+        font-size: 1.8rem !important;
+        /* Make text readable */
+        margin-left: 0 !important;
+        margin-bottom: 10px !important;
+        text-align: center !important;
+        line-height: 1.2 !important;
+        min-height: auto !important;
+    }
+
+    .tour-subtitle {
+        margin-left: 0 !important;
+        font-size: 1rem !important;
+        text-align: center !important;
+    }
+
+    /* 6. Center the arrow buttons */
+    .nav-buttons {
+        margin-left: 0 !important;
+        justify-content: center !important;
+        margin-bottom: 20px !important;
+        width: 100% !important;
+    }
+
+    /* 7. Center the View Journal button */
+    .details-btn {
+        margin-left: 0 !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+}
